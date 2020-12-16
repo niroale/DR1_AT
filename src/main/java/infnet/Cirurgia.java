@@ -40,16 +40,9 @@ public class Cirurgia extends Servico {
     }
 
     @Override
-     public boolean UsarFocinheira(Paciente p){
-         boolean usarFocinheira;
-         if (p.getEspecie() == "Cachorro" || p.getEspecie() == "Gato") {
-             return isFocinheira();
-         } else{
-             usarFocinheira = false;             
-            return usarFocinheira;
-         }
-
-     }
+    public float calcularValor(){
+        return this.isEmergencia() ? 200 : 100 + (this.getQtdAnestesia() * 50);
+    } 
      
     public void setLocal(String local){
         this.local = local;

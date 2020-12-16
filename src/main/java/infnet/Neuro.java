@@ -40,16 +40,9 @@ public class Neuro extends Servico{
     }   
 
     @Override
-     public boolean UsarFocinheira(Paciente p){
-         boolean usarFocinheira;
-         if (p.getEspecie() == "Cachorro" || p.getEspecie() == "Gato") {
-             return isFocinheira();
-         } else{
-             usarFocinheira = false;             
-            return usarFocinheira;
-         }
-
-     }
+    public float calcularValor(){
+        return this.isEmergencia() ? 200 : 100 + (this.isVacinado() ? 150 : 250);
+    } 
      
      public void setVacinado(boolean vacinado) {
          this.vacinado = vacinado;
@@ -60,7 +53,7 @@ public class Neuro extends Servico{
      }
      
     public void setQtdConvulsaoDia(int qtdConvulsaoDia) throws QtdConvulsaoException {
-        if (convulsao == false ) {
+        if (!convulsao) {
             throw new QtdConvulsaoException("Informar se houve casos de convulsão.");
                 
         }

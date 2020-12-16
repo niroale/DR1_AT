@@ -3,14 +3,14 @@ package infnet;
 
 public class Paciente {
     
-    private String nomePaciente;
-    private float pesoPaciente;
+    private String nome;
+    private float peso;
     private boolean castrado;
     private String especie;
     
-    public Paciente( String nomePaciente, float pesoPaciente, boolean castrado, String especie){
-        this.nomePaciente = nomePaciente;
-        this.pesoPaciente = pesoPaciente;
+    public Paciente( String nome, float peso, boolean castrado, String especie){
+        this.nome = nome;
+        this.peso = peso;
         this.castrado = castrado;
         this.especie = especie;
     }
@@ -19,9 +19,9 @@ public class Paciente {
     public String toString(){
     
         StringBuilder sb = new StringBuilder();
-        sb.append(this.getNomePaciente());
+        sb.append(this.getNome());
         sb.append(";");
-        sb.append(this.getPesoPaciente());
+        sb.append(this.getPeso());
         sb.append(";");
         sb.append(this.isCastrado());    
         sb.append(";");
@@ -31,12 +31,12 @@ public class Paciente {
     
     }
     
-    public String getNomePaciente() {
-        return nomePaciente;
+    public String getNome() {
+        return nome;
     }  
     
-    public float getPesoPaciente() {
-        return pesoPaciente;
+    public float getPeso() {
+        return peso;
     }        
     
     public boolean isCastrado() {

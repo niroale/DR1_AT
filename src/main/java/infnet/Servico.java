@@ -30,7 +30,9 @@ public abstract class Servico {
     }
     
     public abstract boolean UsarFocinheira(Paciente p);
-
+    
+    public abstract float calcularValor();
+    
     public String getVeterinario() {
         return veterinario;
     }
